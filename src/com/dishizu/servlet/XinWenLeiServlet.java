@@ -2,11 +2,19 @@ package com.dishizu.servlet;
 
 import java.io.IOException;
 import java.io.PrintWriter;
+import java.util.List;
 
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+
+
+import com.dishizu.dao.XinWenLeidao;
+import com.dishizu.daoimpl.XinWenLeidaoimpl;
+
+import com.dishizu.entity.XinWenLei;
+
 
 public class XinWenLeiServlet extends HttpServlet {
 
@@ -22,6 +30,16 @@ public class XinWenLeiServlet extends HttpServlet {
 	 */
 	public void doGet(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
+		
+		request.setCharacterEncoding("UTF-8");
+		response.setCharacterEncoding("UTF-8");
+		XinWenLeidao pd=(XinWenLeidao) new XinWenLeidaoimpl();
+		List<XinWenLei> xwlb=pd.queryXinWenLeis();
+		
+		request.setAttribute("xwlb", xwlb);
+		request.getRequestDispatcher("/article.jsp").forward(request, response);
+		
+		
 
 		response.setContentType("text/html");
 		PrintWriter out = response.getWriter();

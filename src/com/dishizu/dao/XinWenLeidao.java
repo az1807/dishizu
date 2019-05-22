@@ -1,5 +1,11 @@
 package com.dishizu.dao;
 
-public interface XinWenLeidao {
+import java.util.List;
 
+import com.dishizu.entity.XinWenLei;
+
+
+
+public interface XinWenLeidao {
+	List<XinWenLei> queryXinWenLeis();
 }
