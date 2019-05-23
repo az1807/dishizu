@@ -88,14 +88,24 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 
     <section class="article-content">
         <ul>
-           <%
-              List<XinWenLieBiao> xwlb = (List<XinWenLieBiao>)request.getAttribute("xwfl");
+        <%
+              List<XinWenLieBiao> xwfl = (List<XinWenLieBiao>)request.getAttribute("xwfl");
                  %>
-                 
-                 <% for (int i=0;i<xwfl.size();i++){ %>
-                 
-                  <li><a href="#"><%=xwfl.get(i).getxinwenliebiao() %>></a></li>
-            <%    } %>
+                 <%for (int i=0;i<xwfl.size();i++) {%>
+            <li>
+                <div class="article-date">
+                    <strong>01</strong>
+                    <p>2017/05</p>
+                </div>
+                <div class="article-info">
+                    <a href="article_list_content.html">
+                        <h3><%=xwfl.get(i).getXinwenliebiao()%></h3>
+                        <p>按家具从风格上可以分为：现代家具、欧式古典家具、美式家具、中式古典家具（也就是红木家具），还有近两年比较流行的新古典...</p>
+                    </a>
+                </div>
+            </li>
+<%} %>
+           
         </ul>
 
     </section>

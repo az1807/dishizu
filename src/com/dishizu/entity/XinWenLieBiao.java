@@ -1,13 +1,13 @@
 package com.dishizu.entity;
 
 public class XinWenLieBiao {
-	private int xinwenid;
+	private int idxinwen;
 	private String xinwenliebiao;
 	public int getXinwenid() {
-		return xinwenid;
+		return idxinwen;
 	}
-	public void setXinwenid(int xinwenid) {
-		this.xinwenid = xinwenid;
+	public void setXinwenid(int idxinwen) {
+		this.idxinwen = idxinwen;
 	}
 	public String getXinwenliebiao() {
 		return xinwenliebiao;
@@ -16,9 +16,9 @@ public class XinWenLieBiao {
 		this.xinwenliebiao = xinwenliebiao;
 	}
 	
-	public XinWenLieBiao(int xinwenid, String xinwenliebiao) {
+	public XinWenLieBiao(int idxinwen, String xinwenliebiao) {
 	
-		this.xinwenid = xinwenid;
+		this.idxinwen = idxinwen;
 		this.xinwenliebiao = xinwenliebiao;
 	}
 
@@ -27,7 +27,7 @@ public class XinWenLieBiao {
 	}
 	@Override
 	public String toString() {
-		return "XinWenLieBiao [xinwenid=" + xinwenid + ", xinwenliebiao="
+		return "XinWenLieBiao [idxinwen=" + idxinwen + ", xinwenliebiao="
 				+ xinwenliebiao + "]";
 	}
 	

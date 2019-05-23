@@ -13,7 +13,7 @@ import com.dishizu.until.DBManager;
 public class XinWenLieBiaodaoimpl implements XinWenLieBiaodao {
 	public List<XinWenLieBiao> queryXinWenLieBiaos() {
 		List<XinWenLieBiao> xwfl = new ArrayList<XinWenLieBiao>();
-		ResultSet rs = DBManager.querySQL("select * from xinwen;");
+		ResultSet rs = DBManager.querySQL("select * from chechedb.xinwen;");
        try {
 		while(rs.next()){
 			XinWenLieBiao fl = new XinWenLieBiao(); 

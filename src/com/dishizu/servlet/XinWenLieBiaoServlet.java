@@ -52,7 +52,7 @@ public class XinWenLieBiaoServlet extends HttpServlet {
 		List<XinWenLieBiao> xwfl=pd.queryXinWenLieBiaos();
 		
 		request.setAttribute("xwfl", xwfl);
-		request.getRequestDispatcher("/article_list_more.jsp").forward(request, response);
+		request.getRequestDispatcher("/qiantai/article_list_more.jsp").forward(request, response);
 
 		response.setContentType("text/html");
 		PrintWriter out = response.getWriter();
