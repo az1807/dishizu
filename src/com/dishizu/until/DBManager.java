@@ -1,16 +1,12 @@
 package com.dishizu.until;
 
 
+import java.sql.Connection;
 import java.sql.DriverManager;
+import java.sql.ResultSet;
+import java.sql.Statement;
 
 import java.sql.SQLException;
-
-
-import com.mysql.jdbc.Connection;
-import com.mysql.jdbc.ResultSet;
-import com.mysql.jdbc.Statement;
-
-
 
 
 public class DBManager {
@@ -25,7 +21,7 @@ public class DBManager {
 		Statement sta = null;
 		try {
 			con = (Connection) DriverManager.getConnection(
-					"jdbc:mysql://localhost:3306/jiajudb", "root", "admin");
+					"jdbc:mysql://localhost:3306/chechedb", "root", "admin");
 			System.out.println("数据库连接成功！");
 			sta = (Statement) con.createStatement();
 			int n = sta.executeUpdate(sql);
@@ -63,7 +59,7 @@ public class DBManager {
 		Statement sta = null;
 		try {
 			con = (Connection) DriverManager.getConnection(
-					"jdbc:mysql://localhost:3306/jiajudb", "root", "admin");
+					"jdbc:mysql://localhost:3306/chechedb", "root", "admin");
 			sta = (Statement) con.createStatement();
 			ResultSet rs = (ResultSet) sta.executeQuery(sql);
 			return rs;

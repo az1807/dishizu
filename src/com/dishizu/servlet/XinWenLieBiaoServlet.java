@@ -9,14 +9,29 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-
 import com.dishizu.dao.XinWenLeidao;
+import com.dishizu.dao.XinWenLieBiaodao;
 import com.dishizu.daoimpl.XinWenLeidaoimpl;
-
+import com.dishizu.daoimpl.XinWenLieBiaodaoimpl;
 import com.dishizu.entity.XinWenLei;
+import com.dishizu.entity.XinWenLieBiao;
 
+public class XinWenLieBiaoServlet extends HttpServlet {
 
-public class XinWenLeiServlet extends HttpServlet {
+	/**
+	 * Constructor of the object.
+	 */
+	public XinWenLieBiaoServlet() {
+		super();
+	}
+
+	/**
+	 * Destruction of the servlet. <br>
+	 */
+	public void destroy() {
+		super.destroy(); // Just puts "destroy" string in log
+		// Put your code here
+	}
 
 	/**
 	 * The doGet method of the servlet. <br>
@@ -33,13 +48,11 @@ public class XinWenLeiServlet extends HttpServlet {
 		
 		request.setCharacterEncoding("UTF-8");
 		response.setCharacterEncoding("UTF-8");
-		XinWenLeidao pd=new XinWenLeidaoimpl();
-		List<XinWenLei> xwlb=pd.queryXinWenLeis();
+		XinWenLieBiaodao pd=new XinWenLieBiaodaoimpl();
+		List<XinWenLieBiao> xwfl=pd.queryXinWenLieBiaos();
 		
-		request.setAttribute("xwlb", xwlb);
-		request.getRequestDispatcher("/article.jsp").forward(request, response);
-		
-		
+		request.setAttribute("xwfl", xwfl);
+		request.getRequestDispatcher("/article_list_more.jsp").forward(request, response);
 
 		response.setContentType("text/html");
 		PrintWriter out = response.getWriter();
@@ -82,6 +95,15 @@ public class XinWenLeiServlet extends HttpServlet {
 		out.println("</HTML>");
 		out.flush();
 		out.close();
+	}
+
+	/**
+	 * Initialization of the servlet. <br>
+	 *
+	 * @throws ServletException if an error occurs
+	 */
+	public void init() throws ServletException {
+		// Put your code here
 	}
 
 }

@@ -1,29 +1,29 @@
 package com.dishizu.entity;
 
 public class XinWenLei {
-	private int id;
-	private String leib;
+	private int idxinwen;
+	private String xinwenleibie;
 
-	public int getId() {
-		return id;
+	public int getidxinwen() {
+		return idxinwen;
 	}
 
-	public void setId(int id) {
-		this.id = id;
+	public void setidxinwen(int idxinwen) {
+		this.idxinwen = idxinwen;
 	}
 
-	public String getLeib() {
-		return leib;
+	public String getxinwenleibie() {
+		return xinwenleibie;
 	}
 
-	public void setLeib(String leib) {
-		this.leib = leib;
+	public void setxinwenleibie(String xinwenleibie) {
+		this.xinwenleibie = xinwenleibie;
 	}
 
-	public XinWenLei(int id, String leib) {
+	public XinWenLei(int idxinwen, String xinwenleibie) {
 		super();
-		this.id = id;
-		this.leib = leib;
+		this.idxinwen = idxinwen;
+		this.xinwenleibie = xinwenleibie;
 	}
 
 	public XinWenLei() {
@@ -32,7 +32,7 @@ public class XinWenLei {
 
 	@Override
 	public String toString() {
-		return "XinWenLei [id=" + id + ", leib=" + leib + "]";
+		return "XinWenLei [idxinwen=" + idxinwen + ", xinwenleibie=" + xinwenleibie + "]";
 	}
 	
 }
