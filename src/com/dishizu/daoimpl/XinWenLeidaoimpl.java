@@ -14,7 +14,7 @@ import com.dishizu.until.DBManager;
 public class XinWenLeidaoimpl implements XinWenLeidao {
 	public List<XinWenLei> queryXinWenLeis() {
 		List<XinWenLei> xwlb = new ArrayList<XinWenLei>();
-		ResultSet rs = DBManager.querySQL("select * from xinwen;");
+		ResultSet rs = DBManager.querySQL("SELECT * FROM chechedb.xinwenleibiebiao;");
        try {
 		while(rs.next()){
 			XinWenLei lb = new XinWenLei(); 
