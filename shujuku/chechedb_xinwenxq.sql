@@ -16,29 +16,27 @@
 /*!40111 SET @OLD_SQL_NOTES=@@SQL_NOTES, SQL_NOTES=0 */;
 
 --
--- Table structure for table `ygxxb`
+-- Table structure for table `xinwenxq`
 --
 
-DROP TABLE IF EXISTS `ygxxb`;
+DROP TABLE IF EXISTS `xinwenxq`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!40101 SET character_set_client = utf8 */;
-CREATE TABLE `ygxxb` (
-  `idygxxb` int(11) NOT NULL AUTO_INCREMENT,
-  `ygxm` varchar(45) NOT NULL,
-  `ygnl` varchar(45) NOT NULL,
-  `ygzw` varchar(45) NOT NULL,
-  `ygxb` varchar(45) NOT NULL,
-  PRIMARY KEY (`idygxxb`)
+CREATE TABLE `xinwenxq` (
+  `idxinwen` int(11) NOT NULL,
+  `xinwenxq` varchar(45) NOT NULL,
+  `xwid` varchar(45) NOT NULL,
+  PRIMARY KEY (`idxinwen`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
--- Dumping data for table `ygxxb`
+-- Dumping data for table `xinwenxq`
 --
 
-LOCK TABLES `ygxxb` WRITE;
-/*!40000 ALTER TABLE `ygxxb` DISABLE KEYS */;
-/*!40000 ALTER TABLE `ygxxb` ENABLE KEYS */;
+LOCK TABLES `xinwenxq` WRITE;
+/*!40000 ALTER TABLE `xinwenxq` DISABLE KEYS */;
+/*!40000 ALTER TABLE `xinwenxq` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
 
@@ -50,4 +48,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2019-05-21  8:57:50
+-- Dump completed on 2019-05-27 20:01:59

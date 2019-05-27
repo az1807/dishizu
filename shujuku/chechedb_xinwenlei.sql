@@ -16,29 +16,28 @@
 /*!40111 SET @OLD_SQL_NOTES=@@SQL_NOTES, SQL_NOTES=0 */;
 
 --
--- Table structure for table `cpb`
+-- Table structure for table `xinwenlei`
 --
 
-DROP TABLE IF EXISTS `cpb`;
+DROP TABLE IF EXISTS `xinwenlei`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!40101 SET character_set_client = utf8 */;
-CREATE TABLE `cpb` (
-  `idcpb` int(11) NOT NULL AUTO_INCREMENT,
-  `cpmc` varchar(45) NOT NULL,
-  `cpjg` varchar(45) NOT NULL,
-  `cpys` varchar(45) NOT NULL,
-  `cplb` varchar(45) DEFAULT NULL,
-  PRIMARY KEY (`idcpb`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+CREATE TABLE `xinwenlei` (
+  `idxinwen` int(11) NOT NULL AUTO_INCREMENT,
+  `xinwenleibie` varchar(45) NOT NULL,
+  `lid` int(11) NOT NULL,
+  PRIMARY KEY (`idxinwen`)
+) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
--- Dumping data for table `cpb`
+-- Dumping data for table `xinwenlei`
 --
 
-LOCK TABLES `cpb` WRITE;
-/*!40000 ALTER TABLE `cpb` DISABLE KEYS */;
-/*!40000 ALTER TABLE `cpb` ENABLE KEYS */;
+LOCK TABLES `xinwenlei` WRITE;
+/*!40000 ALTER TABLE `xinwenlei` DISABLE KEYS */;
+INSERT INTO `xinwenlei` VALUES (1,'优惠新闻',1),(2,'同行新闻',2),(3,'车车百科',3);
+/*!40000 ALTER TABLE `xinwenlei` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
 
@@ -50,4 +49,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2019-05-21  8:57:50
+-- Dump completed on 2019-05-27 20:01:59

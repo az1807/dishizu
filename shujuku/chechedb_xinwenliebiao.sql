@@ -16,29 +16,28 @@
 /*!40111 SET @OLD_SQL_NOTES=@@SQL_NOTES, SQL_NOTES=0 */;
 
 --
--- Table structure for table `lyb`
+-- Table structure for table `xinwenliebiao`
 --
 
-DROP TABLE IF EXISTS `lyb`;
+DROP TABLE IF EXISTS `xinwenliebiao`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!40101 SET character_set_client = utf8 */;
-CREATE TABLE `lyb` (
-  `idlyb` int(11) NOT NULL AUTO_INCREMENT,
-  `xm` varchar(45) NOT NULL,
-  `lynr` varchar(45) NOT NULL,
-  `lysj` varchar(45) NOT NULL,
-  `lyzt` varchar(45) NOT NULL,
-  PRIMARY KEY (`idlyb`)
+CREATE TABLE `xinwenliebiao` (
+  `idxinwen` int(11) NOT NULL,
+  `xinwenliebiao` varchar(45) NOT NULL,
+  `lbid` int(11) NOT NULL,
+  PRIMARY KEY (`idxinwen`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
--- Dumping data for table `lyb`
+-- Dumping data for table `xinwenliebiao`
 --
 
-LOCK TABLES `lyb` WRITE;
-/*!40000 ALTER TABLE `lyb` DISABLE KEYS */;
-/*!40000 ALTER TABLE `lyb` ENABLE KEYS */;
+LOCK TABLES `xinwenliebiao` WRITE;
+/*!40000 ALTER TABLE `xinwenliebiao` DISABLE KEYS */;
+INSERT INTO `xinwenliebiao` VALUES (1,'sdc',1),(2,'we',1),(3,'wedf',2),(4,'wed',2),(5,'wdfw',3),(6,'edw',3);
+/*!40000 ALTER TABLE `xinwenliebiao` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
 
@@ -50,4 +49,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2019-05-21  8:57:51
+-- Dump completed on 2019-05-27 20:01:59
