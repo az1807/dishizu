@@ -1,4 +1,4 @@
-<%@ page language="java" import="java.util.*,com.dishizu.entity.*" pageEncoding="UTF-8"%>
+<%@ page language="java" import="java.util.*,com.dishizu.entity.*" pageEncoding="utf-8"%>
 <%
 String path = request.getContextPath();
 String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.getServerPort()+path+"/";
@@ -75,23 +75,31 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 </header>
 <div class="am-slider am-slider-default" data-am-flexslider="{playAfterPaused: 8000}">
     <ul class="am-slides">
-        <li><img src="/images/banner.jpg" alt="" ></li>
-        <li><img src="/images/banner.jpg" alt="" ></li>
-        <li><img src="/images/banner.jpg" alt="" ></li>
-        <li><img src="/images/banner.jpg" alt="" ></li>
+        <li><img src="images/banner.jpg" alt="" ></li>
+        <li><img src="images/banner.jpg" alt="" ></li>
+        <li><img src="images/banner.jpg" alt="" ></li>
+        <li><img src="images/banner.jpg" alt="" ></li>
     </ul>
 </div>
 <div>
-    <header class="article_list_more_header">
-     <div> <a>首页</a>&#62;<a>新闻资讯</a>&#62;<a>更多</a></div>
+    <header class="header-article-list">
+        <div class="article-position">新闻资讯</div>
+        <ul>
+            <li><a href="article_list.html">行业新闻</a></li>
+            <li><a href="article_list.html">家居百科</a></li>
+            <li><a href="article_list.html">公司新闻</a></li>
+        </ul>
+        <div class="article-more-btn">
+            <a href="article_list_more.html">MORE &#62; &#62;</a>
+        </div>
     </header>
 
     <section class="article-content">
         <ul>
-        <%
-              List<XinWenLieBiao> xwfl = (List<XinWenLieBiao>)request.getAttribute("xwfl");
+         <%
+              List<XinWenXQ> xwxq = (List<XinWenXQ>)request.getAttribute("xwxq");
                  %>
-                 <%for (int i=0;i<xwfl.size();i++) {%>
+                 <%for (int i=0;i<xwxq.size();i++) {%>
             <li>
                 <div class="article-date">
                     <strong>01</strong>
@@ -99,25 +107,15 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
                 </div>
                 <div class="article-info">
                     <a href="article_list_content.html">
-                        <h3><%=xwfl.get(i).getXinwenliebiao()%></h3>
-                        <p>按家具从风格上可以分为：现代家具、欧式古典家具、美式家具、中式古典家具（也就是红木家具），还有近两年比较流行的新古典...</p>
+                        <h3>家具有哪些类型?</h3>
+                        <p><%=xwxq.get(i).getXinWenxq()%></p>
                     </a>
                 </div>
             </li>
 <%}; %>
-           
         </ul>
 
     </section>
-    <div class="article_list_more_pages">
-        <ul>
-            <li><a>上一页</a></li>
-            <li class="article-current"><a>1</a></li>
-            <li><a>2</a></li>
-            <li><a>3</a></li>
-            <li><a>下一页</a></li>
-        </ul>
-    </div>
 </div>
 ﻿<footer>
     <div>
